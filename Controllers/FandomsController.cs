@@ -158,7 +158,10 @@ namespace Uc_10_kauane_FandomWorld.Controllers
         {
             return View();
         }
-
+        public IActionResult detalhes()
+        {
+            return View();
+        }
         //Pesquisa
         [HttpGet]
         public async Task<IActionResult> Index(string searchString)

@@ -162,6 +162,15 @@ namespace Uc_10_kauane_FandomWorld.Controllers
             return _context.Personagem.Any(e => e.PersonagemId == id);
         }
 
+        public IActionResult Personagem()
+        {
+            return View();
+        }
+
+        public IActionResult detalhes()
+        {
+            return View();
+        }
 
         //Pesquisa
         [HttpGet]

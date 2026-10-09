@@ -162,6 +162,16 @@ namespace Uc_10_kauane_FandomWorld.Controllers
         }
 
 
+        public IActionResult Livro()
+        {
+            return View();
+        }
+
+        public IActionResult detalhes()
+        {
+            return View();
+        }
+
 
         //Pesquisa
         [HttpGet]

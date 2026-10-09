@@ -147,6 +147,7 @@ form[method="get"] .input-group {
     border: 1px solid #00f0ff;
     border-radius: 999px;
     text-decoration: none;
+    
 }
 
     .btn:hover {
@@ -163,33 +164,148 @@ form[method="get"] .input-group {
     border-radius: 10px;
     overflow: hidden;
     color: #fff;
+    position: relative;
 }
 
-    .card-universo img {
+    /* só a capa (filho direto) */
+    .card-universo > img {
         width: 150px;
         object-fit: cover;
     }
 
-    .card-universo div {
+    .card-universo > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
         padding: 20px 24px;
+        text-align: left; /* vence o center do .pagina > div:last-of-type */
+    }
+
+    .card-universo h3 {
+        color: #fff;
+        margin: 0;
     }
 
     .card-universo p {
-        color: #8a96a8;
-        margin-bottom: 16px;
+        color: #a9b8cc;
+        margin: 0;
     }
 
-    .btn img,
-    .card-universo .btn img {
-        width: 20px;
-        height: 25px;
-        margin-right: 8px;
-        vertical-align: middle;
-    }
+/* ícone do botão */
+.btn img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+    object-fit: contain;
+}
 
 .btn:hover img {
     content: url('/imagem/detalhe_preto.png');
 }
+
+.tag {
+    position: absolute;
+    top: 12px;
+    right: 12px; /* troque por left: 12px para o canto esquerdo */
+    padding: 4px 14px;
+    border: 1px solid #00f0ff;
+    border-radius: 999px;
+    background: rgba(0, 240, 255, 0.08);
+}
+
+    .tag h2 {
+        margin: 0;
+        font-size: 0.85rem; /* o h2 padrão é grande demais para uma tag */
+        font-weight: 500;
+        color: #00f0ff;
+    }
+
+
+.detalhe-universo {
+    display: flex;
+    gap: 32px;
+    margin-top: 20px;
+    padding: 28px;
+    background: #071d3d;
+    border: 1px solid #1f78a8;
+    border-radius: 14px;
+    color: #fff;
+    text-align: left; /* vence o center do .pagina > div:last-of-type */
+}
+
+.detalhe-capa {
+    width: 260px;
+    height: auto;
+    align-self: flex-start;
+    object-fit: cover;
+    border: 2px solid #1f78a8;
+    border-radius: 24px;
+}
+
+.detalhe-conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* selo "Personagens Principais" */
+.titulo-secao {
+    align-self: flex-start;
+    padding: 6px 22px;
+    font-weight: 600;
+    color: #00f0ff;
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid #00f0ff;
+    border-radius: 999px;
+}
+
+/* personagens em círculo */
+.personagens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+}
+
+.personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+    .personagem img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 2px solid #00f0ff;
+        border-radius: 30%;
+    }
+
+/* caixa de sinopse */
+.sinopse {
+    padding: 16px 20px;
+    background: #0a2a4f;
+    border-radius: 14px;
+}
+
+    .sinopse h3 {
+        margin: 0 0 10px;
+        padding-bottom: 8px;
+        color: #00f0ff;
+        border-bottom: 1px solid #00f0ff;
+    }
+
+    .sinopse p {
+        margin: 0;
+        color: #dbe7f5;
+        line-height: 1.5;
+    }
 
 
 
@@ -241,3 +357,147 @@ form[method="get"] .input-group {
     text-align: center;
     margin-top: 16px;
 }
+
+.detalhe-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 260px;
+    flex-shrink: 0;
+}
+
+/* ficha técnica */
+.ficha {
+    list-style: none;
+    margin: 0;
+    padding: 14px 16px;
+    background: #0a2a4f;
+    border-radius: 14px;
+}
+
+    .ficha li {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 0;
+        color: #dbe7f5;
+        border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+    }
+
+        .ficha li:last-child {
+            border-bottom: none;
+        }
+
+        .ficha li span {
+            color: #00f0ff;
+            font-weight: 600;
+        }
+
+/* título e selos */
+.detalhe-topo h1 {
+    margin: 0 0 10px;
+    text-align: left;
+    color: #fff;
+}
+
+.selos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.selo {
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    color: #00f0ff;
+    background: rgba(0, 240, 255, 0.08);
+    border: 1px solid #00f0ff;
+    border-radius: 999px;
+}
+
+/* sinopse alinhada à esquerda */
+.sinopse,
+.sinopse h3,
+.sinopse p {
+    text-align: left;
+}
+
+/* personagem com função */
+.personagem small {
+    font-weight: 400;
+    color: #8fa3bd;
+}
+
+.personagens {
+    justify-content: flex-start;
+    gap: 48px;
+}
+
+.livros-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.livro-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 140px;
+    color: #fff;
+    text-decoration: none;
+}
+
+    .livro-item img {
+        width: 140px;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid #1f78a8;
+        border-radius: 12px;
+        transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .livro-item:hover img {
+        border-color: #00f0ff;
+        transform: translateY(-4px);
+    }
+
+    .livro-item small {
+        text-align: center;
+        color: #dbe7f5;
+    }
+
+.habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+.habilidade {
+    padding: 16px 18px;
+    text-align: left;
+    background: #0a2a4f;
+    border: 1px solid #1f78a8;
+    border-left: 4px solid #00f0ff;
+    border-radius: 12px;
+}
+
+    .habilidade h4 {
+        margin: 0 0 8px;
+        text-align: left;
+        color: #00f0ff;
+    }
+
+    .habilidade p {
+        margin: 0;
+        color: #dbe7f5;
+        line-height: 1.5;
+    }
+
+    .habilidade ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+        color: #a9b8cc;
+        line-height: 1.5;
+    }
