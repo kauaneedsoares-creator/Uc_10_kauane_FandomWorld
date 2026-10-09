@@ -1,0 +1,47 @@
+﻿@model Usuario
+
+
+<link rel="stylesheet" href="~/css/Perfil.css" />
+
+<div class="pagina">
+
+    <div class="perfil">
+        <h2>Meu perfil</h2>
+
+        <nav class="menu-perfil">
+            <a class="ativo" asp-controller="Usuarios" asp-action="Perfil">Meus dados</a>
+            <a asp-controller="Usuarios" asp-action="Favoritos">Favoritos</a>
+        </nav>
+
+        <form asp-action="Perfil" method="post">
+            <div class="campo">
+                <label asp-for="NomeUsuario">Nome</label>
+                <input asp-for="NomeUsuario" />
+                <span asp-validation-for="NomeUsuario"></span>
+            </div>
+
+            <div class="campo">
+                <label asp-for="Email">E-mail</label>
+                <input asp-for="Email" />
+                <span asp-validation-for="Email"></span>
+            </div>
+
+            <div class="campo">
+                <label asp-for="Senha">Senha</label>
+                <input asp-for="Senha" type="password" />
+                <span asp-validation-for="Senha"></span>
+            </div>
+
+            <div class="campo">
+                <label asp-for="DataCadastro">Data Cadastro</label>
+                <input asp-for="DataCadastro" type="date" />
+                <span asp-validation-for="DataCadastro"></span>
+            </div>
+
+            <button type="submit">Salvar</button>
+            <a asp-controller="Home" asp-action="Index" class="sair">Sair</a>
+
+        </form>
+    </div>
+
+</div>

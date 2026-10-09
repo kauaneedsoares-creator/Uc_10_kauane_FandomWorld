@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Favoritos";
+}
+
+<link rel="stylesheet" href="~/css/perfil.css" asp-append-version="true" />
+
+<div class="pagina">
+
+    <div class="perfil">
+        <h2>Meu perfil</h2>
+
+        <nav class="menu-perfil">
+            <a asp-controller="Usuarios" asp-action="Perfil">Meus dados</a>
+            <a class="ativo" asp-controller="Usuarios" asp-action="Favoritos">Favoritos</a>
+        </nav>
+
+        <p class="vazio">Você ainda não tem favoritos.</p>
+
+        <a asp-controller="Home" asp-action="Index" class="sair">Sair</a>
+    </div>
+</div>

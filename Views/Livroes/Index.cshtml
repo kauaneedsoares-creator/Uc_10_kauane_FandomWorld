@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Uc_10_kauane_FandomWorld.Models.Livro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="pagina">
+    <h1>Livros</h1>
+
+    <div class="criar">
+        <a asp-action="Create">
+            <img src="~/imagem/Adicionar.png" alt="Adicionar" />
+            Adicionar Livros
+        </a>
+    </div>
+
+
+    <form asp-action="Index" method="get">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchString" placeholder="Pesquisar pelo nome do livro...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Titulo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Autor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AnoPublicacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sinopse)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fandom)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Titulo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Autor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AnoPublicacao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sinopse)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fandom.NomeFandom)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.LivroId"><img class="acoes" src="~/imagem/Editar.png" alt="Editar" /></a> |
+
+                        <a asp-action="Details" asp-route-id="@item.LivroId"><img class="acoes" src="~/imagem/Detalhes.png" alt="Detalhes" /></a> |
+
+                        <a asp-action="Delete" asp-route-id="@item.LivroId"><img class="acoes" src="~/imagem/Excluir.png" alt="Excluir" /></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

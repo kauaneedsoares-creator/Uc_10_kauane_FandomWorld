@@ -1,0 +1,243 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.pagina {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    box-sizing: border-box;
+    padding: 40px 16px;
+    background-image: url('/imagem/FandomWorld2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+header {
+    background-color: #011419;
+}
+
+tr {
+    color: white;
+    background: #021D40;
+}
+
+h1 {
+    color: white;
+}
+
+thead {
+    background: #010F21;
+}
+
+img.acoes {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.pagina .table {
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+    .pagina .table th,
+    .pagina .table td {
+        padding: 10px;
+    }
+
+
+.criar {
+    width: 250px;
+    padding: 10px;
+    text-align: center;
+    background: #000000;
+    border-radius: 20px;
+    border: 1px solid #00ffff;
+    margin-bottom: 10px;
+}
+
+    .criar a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .criar img {
+        width: 25px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+/* Barra de pesquisa */
+form[method="get"] .input-group {
+    max-width: 700px;
+    margin: 0 auto 24px;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid #16324a;
+    background: #0a2238;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    form[method="get"] .input-group:focus-within {
+        border-color: #00f0ff;
+        box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.18);
+    }
+
+    form[method="get"] .input-group .form-control {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        color: #fff;
+        padding: 12px 20px;
+    }
+
+        form[method="get"] .input-group .form-control::placeholder {
+            color: #6f8da0;
+        }
+
+    form[method="get"] .input-group .btn {
+        background: #00d9e6;
+        border: none;
+        color: #001521;
+        font-weight: 600;
+        padding: 12px 28px;
+        border-radius: 0;
+        transition: background 0.2s;
+    }
+
+        form[method="get"] .input-group .btn:hover {
+            background: #3fe8f3;
+            color: #001521;
+        }
+
+
+
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #00f0ff;
+    background: transparent;
+    border: 1px solid #00f0ff;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+    .btn:hover {
+        background: #00f0ff;
+        color: #001521;
+    }
+
+
+.card-universo {
+    display: flex;
+    margin-top: 20px;
+    background: #071d3d;
+    border: 1px solid #1f78a8;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+}
+
+    .card-universo img {
+        width: 150px;
+        object-fit: cover;
+    }
+
+    .card-universo div {
+        padding: 20px 24px;
+    }
+
+    .card-universo p {
+        color: #8a96a8;
+        margin-bottom: 16px;
+    }
+
+    .btn img,
+    .card-universo .btn img {
+        width: 20px;
+        height: 25px;
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+.btn:hover img {
+    content: url('/imagem/detalhe_preto.png');
+}
+
+
+
+/* Centraliza tudo dentro da página */
+.pagina h1,
+.pagina h4 {
+    text-align: center;
+}
+
+.pagina h1 {
+    color: #fff;
+}
+
+.pagina h4 {
+    color: #7fe9f2;
+}
+
+.pagina hr {
+    border-color: #1f78a8;
+    opacity: 1;
+}
+
+.pagina .row {
+    justify-content: center;
+}
+
+.pagina .col-md-4 {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Cores legíveis */
+.pagina .control-label {
+    color: #7fe9f2;
+    margin-top: 12px;
+}
+
+.pagina .text-danger {
+    color: #ff7b85 !important;
+}
+
+/* Botões centralizados */
+.pagina .form-group:last-child {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagina > div:last-of-type {
+    text-align: center;
+    margin-top: 16px;
+}
